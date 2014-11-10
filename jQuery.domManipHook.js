@@ -19,6 +19,9 @@
                 var $elem;
                 
                 callback.call(this, elem);
+                
+                // Constrain only to ELEMENT_NODEs.
+                if (elem.nodeType !== 1) return;
 
                 // Prevent recursive calls. Maybe in the future a system can be devised to loosen this.
                 if (intercepting) return;
