@@ -8,6 +8,7 @@
     <div class="rock">Rock</div>
     <script type="text/javascript">
         require(['jquery', 'jquery.domManipHook'], function($){
+            // This setup can be done in some base or central location, like config (shim init) or a wrapper module.
             $.fn.domManip.hooks.push(function(el, $el) { $el.css({color:'red'}); });
             $.fn.domManip.hooks.push(function(el, $el) { $el.text($el.text().split('').reverse().join('')); });    
 
