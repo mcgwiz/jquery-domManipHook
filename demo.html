@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script src="http://requirejs.org/docs/release/2.1.15/minified/require.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <!-- <script src="jQuery.domManipHook.js"></script> -->   
+</head>
+<body>
+    <div class="rock">Rock</div>
+    <script type="text/javascript">
+        require(['jquery', 'jquery.domManipHook'], function($){
+            $.fn.domManip.hooks.push(function(el, $el) { $el.css({color:'red'}); });
+            $.fn.domManip.hooks.push(function(el, $el) { $el.text($el.text().split('').reverse().join('')); });    
+
+            $('.rock').after('<span>something</span>');
+            $('.rock').before('<span>blah</span>');
+        });
+    </script>
+</body>
+</html>
