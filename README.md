@@ -12,7 +12,7 @@ Simple facility to execute code on any HTML fragment attached to the DOM with jQ
   <script src="jquery.domManipHook.js"></script>
   <script type="text/javascript">
     // Register our hook.
-    $.fn.domManip.hooks.push(function(el, $el) { $el.parent().find('.date').friendlyTime(); });  
+    $.fn.domManip.hooks.push(function(el, $el) { $el.filter('.date').friendlyTime(); });  
   </script>
 </head>
 <body>
