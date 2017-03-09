@@ -1,9 +1,7 @@
 jquery-domManipHook
 ===================
 
-**(Incompatible with jQuery 3.0.0+.)**
-
-Simple facility to execute code on any HTML fragment attached to the DOM with jQuery. Specifically, this is useful in codebases where WebComponents-style "custom tags" exist, and need to be initialized when attached to the DOM. For example, if we are using [jQuery.friendlyTime](https://github.com/blocvox/jquery-friendlyTime) to create a custom Date tag, and we have a template that generates its HTML, we can use jquery.domManipHook to automagically initialize the Date tag whenever it's attached to the DOM.
+Simple facility to execute code on any HTML fragment attached to the DOM with jQuery *2.1.4 and earlier*. Specifically, this is useful in codebases where WebComponents-style "custom tags" exist, and need to be initialized when attached to the DOM. For example, if we are using [jQuery.friendlyTime](https://github.com/blocvox/jquery-friendlyTime) to create a custom Date tag, and we have a template that generates its HTML, we can use jquery.domManipHook to automagically initialize the Date tag whenever it's attached to the DOM.
 
 ```html
 <html>
